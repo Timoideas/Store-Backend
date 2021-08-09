@@ -6,7 +6,7 @@ const SaleSchema = new Schema({
   owner: { type: Schema.Types.ObjectId, ref: 'User' },
   total: { type: String },
   details: { type: String },
-  timestamp: { type: Fecha },
+  timestamp: { type: String, default: Fecha },
 });
 SaleSchema.plugin(validator, { message: 'El {PATH} debería ser único' });
 export default model('Sale', SaleSchema);
