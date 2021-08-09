@@ -6,7 +6,7 @@ const UserSchema = new Schema({
   telefono: { type: String },
   password: { type: String },
   correo: { type: String },
-  // compras: { type: String },
+  compras: { type: Schema.Types.ObjectId, ref: 'Sale' },
 });
 UserSchema.plugin(validator, { message: 'El {PATH} debería ser único' });
 export default model('User', UserSchema);
