@@ -5,6 +5,8 @@ const routes = Router();
 import { Auth } from '../middlewares/auth.middleware';
 
 // ROUTES
+import sale from './sale.routes';
+routes.use('/sale', sale);
 import user from './user.routes';
 routes.use('/user', user);
 
