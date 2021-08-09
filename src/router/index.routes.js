@@ -5,6 +5,8 @@ const routes = Router();
 import { Auth } from '../middlewares/auth.middleware';
 
 // ROUTES
+import user from './user.routes';
+routes.use('/user', user);
 
 import { Index, BadRequest } from '../controllers/global.controller';
 routes.route('/').get(Auth, Index);
